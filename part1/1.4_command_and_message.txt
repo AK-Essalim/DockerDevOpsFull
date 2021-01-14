@@ -1,0 +1,10 @@
+docker image pull devopsdockeruh/exec_bash_exercise
+docker image tag devopsdockeruh/exec_bash_exercise devopsdocker:1.4
+docker run -d --name devops devopsdocker:1.4
+docker exec devops tail -f ./logs.txt
+
+
+Thu, 14 Jan 2021 13:26:20 GMT
+Thu, 14 Jan 2021 13:26:23 GMT
+Secret message is:
+"Docker is easy"

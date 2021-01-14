@@ -1,0 +1,2 @@
+docker build -t devops:1.6 .
+docker container run -it devops:1.6

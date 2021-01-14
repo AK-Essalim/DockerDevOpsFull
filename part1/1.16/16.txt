@@ -1,0 +1,7 @@
+https://docker-devops.herokuapp.com/
+ocker pull devopsdockeruh/heroku-example
+heroku login
+heroku container:login
+docker tag devopsdockeruh/heroku-example registry.heroku.com/docker-devops/web
+docker push registry.heroku.com/docker-devops/web
+heroku container:release -a docker-devops  web

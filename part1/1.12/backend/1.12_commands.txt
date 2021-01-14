@@ -1,0 +1,2 @@
+docker build . -t 1.12:backend
+docker run --rm -p 8000:8000 -v $(pwd)/logs.txt:/backend/logs.txt 1.12:backend
