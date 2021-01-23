@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+    server:
+      image: backend
+      ports:
+        - 8000:8000
+      volumes:
+        - ./logs.txt:/usr/src/app/logs.txt
+      environment:
+        - REDIS=redis
+        - REDIS_PORT=6379
+        - DB_HOST=db
+        - DB_NAME=tietokanta
+        - DB_USERNAME=abdelkarim
+        - DB_PASSWORD=example
+
+    app:
+      image: frontend
+      ports:
+        - 5000:5000
+    redis:
+      image: redis
+    db:
+      image: postgres
+      restart: unless-stopped
+      environment:
+        - POSTGRES_PASSWORD=example
+        - POSTGRES_USER=abdelkarim
+        - POSTGRES_DB=tietokanta

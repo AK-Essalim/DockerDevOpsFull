@@ -1,0 +1,1 @@
+I already fixed the proxy breaking the buttons in exercise 2.9, so i fixed everything at that point by modifying frontend & backend Dockerfiles by removing API-URL and FRONT-URL.

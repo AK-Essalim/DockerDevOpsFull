@@ -1,0 +1,4 @@
+https://github.com/docker-hy/scaling-exercise.git
+cd scaling-exercise
+// docker compose up worked also with scale=2, but lets put 3 to sure
+docker-compose up -d --scale compute=3
